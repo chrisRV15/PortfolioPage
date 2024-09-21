@@ -1,0 +1,115 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #023047;
+    color:white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    color: white;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 35px;
+    color: #ffb703;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 35px;
+    font-weight: bold;
+    transition: 0.5s;
+    color: #ffb703;
+}
+
+.navbar a:hover{
+    color: #fb8500;
+    font-size: 30px;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 600px;
+
+}
+
+.home-content h1{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffb703;
+}
+
+.home-content p {
+    font-size: 20px;
+    text-align: left;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    width: 345px;
+    height: 50px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.btn-box a{
+    position: relative;
+    width: 150px;
+    height: 100%;
+    background: #ffb703;
+    border: 2px solid #ffb703;
+    border-radius: 8px;
+    font-size: 19px;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: white;
+}
+
+.btn-box a:hover{
+    width: 100%;
+}
+
+#textCycle {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
