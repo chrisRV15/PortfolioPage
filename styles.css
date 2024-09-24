@@ -24,11 +24,24 @@
 }
 
 .logo{
+    position: relative;
     font-size: 25px;
     text-decoration: none;
     font-weight: bolder;
     margin-left: 35px;
     color: #ffb703;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
 }
 
 .navbar a{
@@ -50,6 +63,7 @@
     display: flex;
     align-items: center;
     padding: 0 10%;
+    justify-content: space-between;
 }
 
 .home-content{
@@ -58,28 +72,81 @@
 }
 
 .home-content h1{
+    position: relative;
     font-size: 50px;
     font-weight: bold;
     line-height: 1.2;
 }
 
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: .1s;
+}
+
 .home-content h3{
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color: #ffb703;
 }
 
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.4s;
+}
+
 .home-content p {
+    position: relative;
     font-size: 20px;
     text-align: left;
     margin: 20px 0 40px;
 }
 
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
 .home-content .btn-box {
+    position: relative;
     width: 345px;
     height: 50px;
     justify-content: space-between;
     display: flex;
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.8s;
+    z-index: 2;
 }
 
 .btn-box a{
@@ -109,7 +176,129 @@
     width: 100%;
 }
 
+.btn-box .bx{
+    background-color: #ffb703;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.home-social{
+    position: absolute;
+    bottom: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.home-social::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 2;
+}
+
+.home-social a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ffb703;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffb703;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-social a:hover{
+    color: #ffb703;
+}
+
+.home-social a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffb703;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-social a:hover::before{
+    width: 100%;
+}
+
+
+
+.home-image {
+    width: 400px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 #textCycle {
     transition: opacity 0.5s ease;
     opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; 
+    }
+
+    .home-content {
+        text-align: center; 
+    }
+
+    .home-image {
+        margin-top: 20px; 
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
 }
