@@ -7,8 +7,12 @@
     box-sizing: border-box;
 }
 
+.html{
+    scroll-behavior: smooth;
+}
+
 .body{
-    color: white;
+    
 }
 
 .header{
@@ -42,6 +46,10 @@
     background: #023047;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
+}
+
+.logo:hover{
+    color: #fb8500;
 }
 
 .navbar a{
@@ -244,25 +252,23 @@
     width: 100%;
 }
 
-
-
 .home-image {
-    width: 400px;
-    height: 450px;
+    width: 450px;
+    max-width: 100%;
+    height: auto;
     overflow: hidden;
-    border-radius: 50%;
+    clip-path: circle();
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     animation: fadeIn 5s ease-in-out forwards;
 }
 
 .home-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -274,17 +280,129 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .home {
-        flex-direction: column; 
+        padding: 20px 5%;
     }
 
+    .header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .logo{
+        font-size: 20px;
+        margin-left: -10px;
+        text-align: left;
+        margin-right: auto;
+    }
+    
+
     .home-content {
-        text-align: center; 
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
     .home-image {
-        margin-top: 20px; 
+        max-width: 100%;        
+    }
+
+    .home-content h1{
+        font-size: 20px;
+    }
+
+    .home-content h3{
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .home-content .btn-box{
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar a{
+        font-size: smaller;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+}
+
+
+@media (max-width: 768px){
+
+    .home {
+        padding: 20px 5%;
+    }
+
+    .header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .logo{
+        font-size: 20px;
+        margin-left: -10px;
+        text-align: left;
+        margin-right: auto;
+    }
+    
+
+    .home-content {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home-image {
+        max-width: 100%;        
+    }
+
+    .home-content h1{
+        font-size: 20px;
+    }
+
+    .home-content h3{
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .home-content .btn-box{
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar a{
+        font-size: smaller;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+}
+
+@media (max-width: 1024px){
+
+    .home-image{
+        width: 200%;
+        height: auto;
+        clip-path: circle();
+        margin-left: 100px;
     }
 }
 
@@ -301,4 +419,217 @@
     100%{
         width: 0;
     }
+}
+
+
+/* About Me CSS */
+
+.background{
+    min-height: 90vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 40px; 
+    padding: 20px; 
+}
+
+.image-container {
+    flex-shrink: 0; 
+}
+
+.profile {
+    width: 350px; 
+    border-radius: 10%;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.biblography {
+    max-width: 800px; 
+    text-align: left; 
+}
+
+.biblography h1{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    color: #ffb703;
+}
+
+.biblography h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: .8s;
+}
+
+.biblography p{
+    position: relative;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.biblography p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #023047;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.0s;
+}
+
+/*skills */
+
+.skills{
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+.skills h1{
+    text-align: center;
+    color: #ffb703;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.rowcards .column {
+    float: left;
+    width: 25%;
+    margin: 20px;
+    position: relative; 
+    box-shadow: 4px 4px 4px 4px #000000;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.rowcards {
+    margin: 0px -5px;
+    display: flex;
+}
+  
+.rowcards:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rowcards h3{
+    color:#fb8500;
+    font-size: 25px;
+}
+
+.rowcards p{
+    font-size: 20px;
+}
+
+.rowcards .column:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.rowcards .column:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.rowcards .column:nth-child(4){
+    transition-delay: 600ms;
+}
+
+
+
+
+
+.EducationSoftSills{
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.EducationSoftSills .column {
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+  
+.EducationSoftSills.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.EducationSoftSills p{
+    padding: 5px;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.EducationSoftSills h2{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffb703;
+}
+
+.row .column:nth-child(1){
+    transition-delay: 200ms;
+}
+
+.row .column:nth-child(2){
+    transition-delay: 400ms;
+}
+
+
+
+
+
+.fade-in {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+.slide-up {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 2s;
+}
+
+
+
+
+.slide-up.show {
+    opacity: 1;
+    transform: rotateY(0);
 }
