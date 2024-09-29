@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christopher Thomas Background</title>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 
 <body>
@@ -16,7 +18,7 @@
             <a href="#section2">Skills</a>
             <a href="#section3">Education</a>
             <a href="Projects.html">Projects</a>
-            <a href="">Contact me</a>
+            <a href="ContactMe.html">Contact me</a>
         </nav>
     </header>
 
@@ -105,27 +107,6 @@
             </div>
         </div>
     </section>
-
-
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show');
-                }
-            });
-        });
-        const fadeInElements = document.querySelectorAll('.fade-in');
-        fadeInElements.forEach((el) => observer.observe(el));
-
-        const slideUpElements = document.querySelectorAll('.slide-up');
-        slideUpElements.forEach((el) => observer.observe(el));
-
-    </script>
-
 </body>
 
 </html>
